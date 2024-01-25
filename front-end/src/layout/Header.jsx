@@ -3,10 +3,13 @@ import { FaXTwitter, FaMagnifyingGlass } from "react-icons/fa6";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Tissatout.png";
+import Slideshow from "../components/Slideshow";
+import { slide } from "../data/home.js";
 
 function Header() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+
   return (
     <header>
       {/*-- #masthead --*/}
@@ -79,6 +82,7 @@ function Header() {
             </ul>
           </div>
         </nav>
+        <Slideshow images={slide} />
       </div>
     </header>
   );
