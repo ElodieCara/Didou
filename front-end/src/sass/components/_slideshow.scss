@@ -1,52 +1,68 @@
 .container__slide {
-  position: relative;
-  margin-bottom: 30px;
+  width: 100%;
+
+  &__image {
+    height: 520px;
+    position: relative;
+    z-index: 1;
+    top: -60px;
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      object-position: center center;
+      background-position: 100px 50px;
+      margin: auto;
+      height: 100% !important;
+    }
+  }
 
   //   @include mobile {
   //     margin-bottom: 5px;
   //   }
 
-  &__arrow--prev {
-    // @include arrow;
-    right: 1rem;
-  }
+  &__buttons {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -350px;
+    z-index: 99999;
+    margin: 0 30px;
 
-  &__arrow--next {
-    // @include arrow;
-    left: 1rem;
-  }
-
-  &__image {
-    margin: auto;
-    border-radius: 25px;
-
-    & img {
-      width: 100%;
-      height: 415px;
-      overflow: hidden;
-      object-fit: cover;
-      margin: auto;
-      border-radius: 25px;
-
-      //   @include mobile {
-      //     height: 255px;
-      //     border-radius: 10px;
-      //   }
+    &:hover {
+      //changement de couleur ici
     }
   }
 
-  &__number {
+  &__text {
+    width: 430px;
     position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    // color: $secondary-color;
-    font-weight: 500;
-    font-size: 18px;
+    bottom: 360px;
+    left: 150px;
+    z-index: 99999;
+    color: white;
+    font-size: large;
 
-    // @include mobile {
-    //   visibility: hidden;
-    // }
+    & h1 {
+      margin-bottom: 30px;
+    }
+
+    & p {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background-color: #ecac3e;
+    color: #2c3f64;
+    font-weight: bold;
   }
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Tissatout.png";
 import Slideshow from "../components/Slideshow";
-import { slide } from "../data/home.js";
+import { slide as slides } from "../data/home.js";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -82,7 +82,7 @@ function Header() {
             </ul>
           </div>
         </nav>
-        <Slideshow images={slide} />
+        <Slideshow images={slides} />
       </div>
     </header>
   );
