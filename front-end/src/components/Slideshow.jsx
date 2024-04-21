@@ -14,6 +14,10 @@ const Slideshow = ({ images }) => {
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <div className="container__slide">
       <div className="container__slide__image">
@@ -34,6 +38,15 @@ const Slideshow = ({ images }) => {
           src={ArrowNext}
           onClick={nextSlide}
         />
+      </div>
+      <div className="container__slide__pagination">
+        {images.map((_, idx) => (
+          <span
+            key={idx}
+            className={`dot ${idx === currentSlide ? "active" : ""}`}
+            onClick={() => goToSlide(idx)}
+          />
+        ))}
       </div>
       <div className="container__slide__text">
         <h1>Bienvenue !</h1>
