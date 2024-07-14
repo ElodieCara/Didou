@@ -1,7 +1,9 @@
 @import "./base/settings";
 @import "./base/mixins";
 @import "./base/fonts";
+@import "./utils/variables";
 @import "./components/navbar";
 @import "./components/slideshow";
 @import "./layout/header";
+@import "./layout/overview";
 @import "./pages/home";

@@ -1,0 +1,106 @@
+.container__section {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 850px;
+  position: relative;
+  bottom: 100px;
+
+  &__card-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    background-image: $rectangle-orange;
+    margin-right: 300px;
+    width: 850px; // Ajuster la largeur de la carte 1
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__sidebar {
+      list-style: none;
+      padding: 90px;
+
+      &__button {
+        width: 200px;
+        height: 100px;
+        background-color: #ffe600;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        // border: 15px solid $primary-color;
+        cursor: pointer;
+        text-align: center; // Centrer le texte horizontalement
+        color: white; // Couleur du texte blanc
+        display: flex; // Pour centrer le texte horizontalement et verticalement
+        align-items: center; // Centrer verticalement
+        justify-content: center; // Centrer horizontalement
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Ajouter une ombre autour des boutons
+        transition: transform 0.3s ease, box-shadow 0.3s ease; // Ajout d'une transition pour l'effet de survol
+
+        &:hover {
+          transform: scale(1.05); // Augmente légèrement la taille du bouton
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Ajoute une ombre pour l'effet de survol
+        }
+
+        &--tp {
+          background-color: $secondary-color; // Couleur de fond jaune
+          background-image: $icon-toutpetitsbtn; // Chemin vers l'image
+          background-repeat: no-repeat;
+          background-position: right bottom; // Position de l'image
+          background-size: 80px;
+        }
+
+        &--d3 {
+          background-color: #a2a72c; // Vert lime
+        }
+
+        &--d6 {
+          background-color: #d90024; // Rouge tomate
+        }
+
+        &--d8 {
+          background-color: #0066d5; // Bleu Dodger
+        }
+      }
+    }
+  }
+
+  &__card-2 {
+    margin-left: 300px;
+    width: 850px;
+    height: 100%;
+    background-image: $rectangle-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &__content-panel {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      padding: 110px 400px 100px 100px;
+      background: $rectangle-yellow center no-repeat;
+      width: 850px;
+      height: 100%;
+
+      & h3,
+      p {
+        color: white;
+        font-size: large;
+      }
+
+      &__img {
+        position: absolute;
+        top: 483px;
+        left: 355px;
+        width: 100%;
+        height: 100%;
+        background: $icon-toutpetits no-repeat;
+      }
+    }
+  }
+}
