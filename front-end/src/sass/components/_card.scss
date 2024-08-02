@@ -1,0 +1,27 @@
+.card {
+  width: 400px;
+  margin: 0 auto;
+  background-color: $primary-color;
+  box-shadow: 0 5px 20px #999;
+  border-radius: 15px;
+  margin: 0 0 10%;
+
+  &__image {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+
+    & img {
+      width: 150%;
+      position: absolute;
+    }
+  }
+
+  &__title {
+    color: white;
+    padding: 25px 20px;
+    box-sizing: border-box;
+  }
+}

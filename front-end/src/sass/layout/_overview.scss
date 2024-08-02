@@ -29,7 +29,7 @@
         background-color: #ffe600;
         margin-bottom: 10px;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 33px;
         // border: 15px solid $primary-color;
         cursor: pointer;
         text-align: center; // Centrer le texte horizontalement
@@ -43,26 +43,6 @@
         &:hover {
           transform: scale(1.05); // Augmente légèrement la taille du bouton
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Ajoute une ombre pour l'effet de survol
-        }
-
-        &--tp {
-          background-color: $secondary-color; // Couleur de fond jaune
-          background-image: $icon-toutpetitsbtn; // Chemin vers l'image
-          background-repeat: no-repeat;
-          background-position: right bottom; // Position de l'image
-          background-size: 80px;
-        }
-
-        &--d3 {
-          background-color: #a2a72c; // Vert lime
-        }
-
-        &--d6 {
-          background-color: #d90024; // Rouge tomate
-        }
-
-        &--d8 {
-          background-color: #0066d5; // Bleu Dodger
         }
       }
     }
@@ -79,27 +59,36 @@
 
     &__content-panel {
       display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      justify-content: center;
-      padding: 110px 400px 100px 100px;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
       background: $rectangle-yellow center no-repeat;
-      width: 850px;
+      width: 100%;
       height: 100%;
 
-      & h3,
-      p {
-        color: white;
-        font-size: large;
+      &__text {
+        width: 50%;
+        margin: 110px 100px 100px 100px;
+
+        & h3,
+        p {
+          color: white;
+          font-size: large;
+        }
       }
 
       &__img {
-        position: absolute;
-        top: 483px;
-        left: 355px;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
         height: 100%;
-        background: $icon-toutpetits no-repeat;
+
+        img {
+          width: 100%;
+          height: 50%;
+          object-fit: cover;
+        }
       }
     }
   }

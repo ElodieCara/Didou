@@ -1,0 +1,39 @@
+.articles-gallery {
+  display: flex;
+  margin-bottom: 15px;
+
+  &__icon {
+    width: 175px;
+    height: 185px;
+    background-color: $primary-color;
+    border-radius: 20px;
+    padding: 15px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & * {
+      margin-left: 30px;
+    }
+
+    &__title {
+      font-weight: bold;
+    }
+
+    &__description {
+      width: 30vh;
+      font-size: 100%;
+    }
+
+    &__date {
+      font-size: 100%;
+    }
+  }
+}
