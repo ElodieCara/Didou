@@ -10,6 +10,8 @@ import D3 from "@/assets/D3.png";
 import D6 from "@/assets/D6.png";
 import D8 from "@/assets/D8.png";
 import N1 from "@/assets/news/news1.webp";
+import N2 from "@/assets/news/news2.jpg";
+import N3 from "@/assets/news/news3.jpg";
 import ABC from "@/assets/news/abecedaire.png";
 import Blocs from "@/assets/news/blocs-de-jouets.png";
 import Chariot from "@/assets/news/chariot.png";
@@ -67,7 +69,7 @@ export const news = [
     date: "11/11/11",
   },
   {
-    image: N1,
+    image: N2,
     title: "exemple 2",
     iconSrc: ABC,
     description:
@@ -75,7 +77,7 @@ export const news = [
     date: "11/11/11",
   },
   {
-    image: N1,
+    image: N3,
     title: "exemple 3",
     iconSrc: ABC,
     description:
@@ -121,5 +123,28 @@ export const news = [
     description:
       "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     date: "11/11/11",
+  },
+];
+
+export const ideas = [
+  {
+    image: N1,
+    title: "Titre",
+    description: "lorem ipsum",
+  },
+  {
+    image: N2,
+    title: "Titre",
+    description: "lorem ipsum",
+  },
+  {
+    image: N3,
+    title: "Titre",
+    description: "lorem ipsum",
+  },
+  {
+    image: N2,
+    title: "Titre",
+    description: "lorem ipsum",
   },
 ];

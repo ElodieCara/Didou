@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  // height: 100vh;
 
   & h2 {
     padding-bottom: 70px;
@@ -20,20 +21,65 @@
   }
   .news-content {
     display: grid;
-    justify-items: end;
-    width: 100vh;
+    max-width: 1200px; /* Ajustez selon vos besoins */
     gap: 100px;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden; /* Empêche le débordement */
+    box-sizing: border-box;
 
     &__images-gallery {
       display: flex;
       flex-direction: column;
+
+      &__slide-wrapper {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      &__controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        .arrow-prev,
+        .arrow-next {
+          width: 45px;
+          height: 45px;
+          cursor: pointer;
+        }
+      }
+
+      &__slide-pagination {
+        display: flex;
+        gap: 10px;
+        margin: 0 20px;
+
+        & span {
+          width: 30px;
+          height: 30px;
+          background-color: $primary-color;
+          border-radius: 50%;
+          display: inline-block;
+          cursor: pointer;
+
+          &.active {
+            background-color: $secondary-color;
+          }
+        }
+      }
     }
   }
+
   .card__link,
   .articles__link {
     display: block;
     text-decoration: none;
     color: inherit;
+  }
+
+  .card__btn {
+    display: none;
   }
 }
