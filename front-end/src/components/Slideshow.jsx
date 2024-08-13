@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import ArrowNext from "../assets/arrow-circle-left.png";
 import ArrowPrev from "../assets/arrow-circle-right.png";
+import Button from "./Button";
 
 const Slideshow = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,7 +60,7 @@ const Slideshow = ({ images }) => {
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
           officia deserunt mollit anim id est laborum.{" "}
         </p>
-        <div className="container__slide__btn">Learn More</div>
+        <Button className="button large">En savoir plus</Button>
       </div>
     </div>
   );

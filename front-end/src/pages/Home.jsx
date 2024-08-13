@@ -7,6 +7,7 @@ import Overview from "../layout/Overview";
 import ArticleCard from "../components/ArticleCard.jsx";
 import ArrowNext from "../assets/arrow-circle-left.png";
 import ArrowPrev from "../assets/arrow-circle-right.png";
+import Subscribe from "../layout/Subscribe.jsx";
 
 export default function Home() {
   const [articles, setArticles] = useState([]);
@@ -112,12 +113,14 @@ export default function Home() {
                   cover={idea.image}
                   title={idea.title}
                   content={idea.description}
+                  type={da === 0 || da === 3 ? "large" : "small"}
                 />
               </Link>
             ))}
           </div>
         </div>
       </section>
+      <Subscribe />
     </>
   );
 }
