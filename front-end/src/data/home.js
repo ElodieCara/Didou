@@ -35,25 +35,25 @@ export const slide = [
 export const sections = [
   {
     title: "Tout-petits",
-    color: "#ffe600",
+    color: "#ECAC3E",
     buttonImage: Btntp,
     imageCard: Tp,
   },
   {
     title: "Dès 3 ans",
-    color: "#ff6347",
+    color: "rgb(2 141 2)",
     buttonImage: BtnD3,
     imageCard: D3,
   },
   {
     title: "Dès 6 ans",
-    color: "#32cd32",
+    color: "#CF000F",
     buttonImage: BtnD6,
     imageCard: D6,
   },
   {
     title: "Dès 10 ans",
-    color: "#1e90ff",
+    color: "#0066D5",
     buttonImage: BtnD8,
     imageCard: D8,
   },

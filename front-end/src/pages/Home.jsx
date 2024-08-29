@@ -8,6 +8,7 @@ import ArticleCard from "../components/ArticleCard.jsx";
 import ArrowNext from "../assets/arrow-circle-left.png";
 import ArrowPrev from "../assets/arrow-circle-right.png";
 import Subscribe from "../layout/Subscribe.jsx";
+import Footer from "../layout/Footer.jsx";
 
 export default function Home() {
   const [articles, setArticles] = useState([]);
@@ -121,6 +122,7 @@ export default function Home() {
         </div>
       </section>
       <Subscribe />
+      <Footer />
     </>
   );
 }
