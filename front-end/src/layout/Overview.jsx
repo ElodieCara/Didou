@@ -24,7 +24,6 @@ const Overview = () => {
                 .replace(/\s+/g, "")
                 .toLowerCase()}`}
               style={{
-                backgroundColor: section.color,
                 backgroundImage: `url(${section.buttonImage})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "auto",
@@ -58,6 +57,8 @@ const Overview = () => {
             style={{
               backgroundImage: `url(${cardImage})`,
               backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
             }}
           ></div>
         </div>

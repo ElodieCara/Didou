@@ -2,6 +2,13 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import ArrowNext from "../assets/arrow-circle-left.png";
 import ArrowPrev from "../assets/arrow-circle-right.png";
+import ballonJaunePlein from "../assets/ballon-jaune-plein.png";
+import ballonJauneVide from "../assets/ballon-jaune-vide.png";
+import ballonRougePlein from "../assets/ballon-rouge-plein.png";
+import ballonRougeVide from "../assets/ballon-rouge-vide.png";
+import ballonBleuPlein from "../assets/ballon-bleu-plein.png";
+import ballonBleuVide from "../assets/ballon-bleu-vide.png";
+
 import Button from "./Button";
 
 const Slideshow = ({ images }) => {
@@ -18,6 +25,12 @@ const Slideshow = ({ images }) => {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
+
+  const ballons = [
+    { plein: ballonJaunePlein, vide: ballonJauneVide },
+    { plein: ballonRougePlein, vide: ballonRougeVide },
+    { plein: ballonBleuPlein, vide: ballonBleuVide },
+  ];
 
   return (
     <div className="container__slide">
@@ -46,7 +59,17 @@ const Slideshow = ({ images }) => {
             key={idx}
             className={`dot ${idx === currentSlide ? "active" : ""}`}
             onClick={() => goToSlide(idx)}
-          />
+          >
+            <img
+              src={
+                idx === currentSlide
+                  ? ballons[idx % ballons.length].plein // Ballon plein pour la slide active
+                  : ballons[idx % ballons.length].vide // Ballon vide pour les autres slides
+              }
+              alt={`Ballon ${idx + 1}`}
+              className="balloon-icon"
+            />
+          </span>
         ))}
       </div>
       <div className="container__slide__text">

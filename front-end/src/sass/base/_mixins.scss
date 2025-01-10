@@ -9,3 +9,26 @@
     @content;
   }
 }
+
+// Typography Mixins
+@mixin font-primary($size: $font-size-base, $weight: normal, $spacing: 3px) {
+  font-family: $font-family-primary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5;
+  letter-spacing: $spacing;
+}
+
+@mixin font-secondary($size: $font-size-base, $weight: normal) {
+  font-family: $font-family-secondary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5;
+}
+
+@mixin font-tertiary($size: $font-size-base, $weight: normal) {
+  font-family: $font-family-tertiary;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.5;
+}

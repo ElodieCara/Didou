@@ -12,7 +12,7 @@
     align-items: flex-start;
     justify-content: center;
     position: absolute;
-    background-image: $rectangle-orange;
+    background-image: $rectangle-yellow;
     margin-right: 300px;
     width: 850px; // Ajuster la largeur de la carte 1
     height: 100%;
@@ -26,7 +26,7 @@
       &__button {
         width: 200px;
         height: 100px;
-        background-color: #ffe600;
+        background-color: $primary-color;
         margin-bottom: 10px;
         padding: 10px;
         border-radius: 33px;
@@ -69,20 +69,19 @@
       &__text {
         width: 50%;
         margin: 110px 100px 100px 100px;
-
-        & h3,
-        p {
-          color: white;
-          font-size: large;
-        }
       }
 
       &__img {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 50%;
-        height: 100%;
+        width: 46%;
+        height: 31%;
+        position: absolute;
+        top: 510px;
+        right: 41px;
+        // border: black 1px solid;
+        // transform: rotate(3.71deg);
 
         img {
           width: 100%;
